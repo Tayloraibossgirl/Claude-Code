@@ -1,0 +1,23 @@
+I need help creating an iOS 18 shortcut file. Please create a complete, working .shortcut file (plist XML format) with the following specifications:
+
+SHORTCUT NAME: "Record to Note"
+
+ACTIONS (in exact order):
+1. Ask for Input - Question: "Recording name (optional)", Type: Text
+2. Get Current Date - Format: Custom "yyyy-MM-dd HH:mm:ss"
+3. Create Text - "Voice Recording - [input from step 1]\nDate: [date from step 2]\n\n"
+4. Record Audio - Start: Immediately, Finish: On Tap, Quality: High
+5. Find Notes - Where Title is "Voice Recordings", Limit: 1
+6. If no note found - Create Note titled "Voice Recordings"
+7. Append to Note - Add [text from step 3] + [audio from step 4] + "\n\n---\n\n"
+
+ICON: Microphone glyph, Red color
+
+Please generate the complete plist XML content that I can save as a .shortcut file and import directly to my iPhone. Include all necessary WFWorkflowActions, WFWorkflowActionIdentifiers, and WFWorkflowActionParameters.
+
+Also include:
+1. Instructions for saving and importing the file to iPhone
+2. How to grant necessary permissions (Microphone, Notes)
+3. How to add it to Siri and home screen
+
+Make sure the file is fully functional and follows Apple's Shortcuts plist format exactly.

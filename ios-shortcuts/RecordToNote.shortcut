@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WFWorkflowActions</key>
+	<array>
+		<!-- Action 1: Ask for Input -->
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.ask</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFInputType</key>
+				<string>Text</string>
+				<key>WFAskActionPrompt</key>
+				<string>Recording name (optional)</string>
+				<key>WFAskActionDefaultAnswer</key>
+				<string></string>
+			</dict>
+		</dict>
+
+		<!-- Action 2: Get Current Date -->
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.date</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFDateActionMode</key>
+				<string>Get Current Date</string>
+				<key>WFDateFormat</key>
+				<string>Custom</string>
+				<key>WFDateFormatString</key>
+				<string>yyyy-MM-dd HH:mm:ss</string>
+			</dict>
+		</dict>
+
+		<!-- Action 3: Create Text with Recording Info -->
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.gettext</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFTextActionText</key>
+				<dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>Voice Recording - ￼
+Date: ￼
+
+</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{18, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Provided Input</string>
+							</dict>
+							<key>{26, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Current Date</string>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+
+		<!-- Action 4: Record Audio -->
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.recordaudio</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFRecordingStart</key>
+				<string>Immediately</string>
+				<key>WFRecordingEnd</key>
+				<string>On Tap</string>
+				<key>WFAudioQuality</key>
+				<string>High</string>
+			</dict>
+		</dict>
+
+		<!-- Action 5: Find Notes -->
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.filter.notes</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFContentItemFilter</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>WFActionParameterFilterPrefix</key>
+						<integer>0</integer>
+						<key>WFActionParameterFilterTemplates</key>
+						<array>
+							<dict>
+								<key>Operator</key>
+								<integer>4</integer>
+								<key>Property</key>
+								<string>Title</string>
+								<key>Removable</key>
+								<true/>
+								<key>String</key>
+								<string>Voice Recordings</string>
+							</dict>
+						</array>
+					</dict>
+				</dict>
+				<key>WFContentItemSortProperty</key>
+				<string>Last Modified Date</string>
+				<key>WFContentItemSortOrder</key>
+				<string>Latest First</string>
+				<key>WFContentItemLimitEnabled</key>
+				<true/>
+				<key>WFContentItemLimitNumber</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+
+		<!-- Action 6: If/Otherwise - Create Note if None Exists -->
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFCondition</key>
+				<string>Has Any Value</string>
+				<key>WFInput</key>
+				<dict>
+					<key>Type</key>
+					<string>Variable</string>
+					<key>Variable</key>
+					<dict>
+						<key>Value</key>
+						<dict>
+							<key>VariableName</key>
+							<string>Notes</string>
+							<key>Type</key>
+							<string>Variable</string>
+						</dict>
+						<key>WFSerializationType</key>
+						<string>WFTextTokenAttachment</string>
+					</dict>
+				</dict>
+				<key>GroupingIdentifier</key>
+				<string>NotesCheck</string>
+			</dict>
+		</dict>
+
+		<!-- Action 7: Otherwise - Create New Note -->
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.createnote</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFNoteTitle</key>
+				<string>Voice Recordings</string>
+				<key>WFNoteBody</key>
+				<string></string>
+			</dict>
+		</dict>
+
+		<!-- Action 8: End If -->
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.conditional</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>GroupingIdentifier</key>
+				<string>NotesCheck</string>
+				<key>WFControlFlowMode</key>
+				<integer>2</integer>
+			</dict>
+		</dict>
+
+		<!-- Action 9: Append to Note -->
+		<dict>
+			<key>WFWorkflowActionIdentifier</key>
+			<string>is.workflow.actions.appendtonote</string>
+			<key>WFWorkflowActionParameters</key>
+			<dict>
+				<key>WFNote</key>
+				<dict>
+					<key>Value</key>
+					<dict>
+						<key>VariableName</key>
+						<string>Notes</string>
+						<key>Type</key>
+						<string>Variable</string>
+					</dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenAttachment</string>
+				</dict>
+				<key>WFNoteText</key>
+				<dict>
+					<key>WFSerializationType</key>
+					<string>WFTextTokenString</string>
+					<key>Value</key>
+					<dict>
+						<key>string</key>
+						<string>￼
+￼
+
+---
+
+</string>
+						<key>attachmentsByRange</key>
+						<dict>
+							<key>{0, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Text</string>
+							</dict>
+							<key>{2, 1}</key>
+							<dict>
+								<key>Type</key>
+								<string>Variable</string>
+								<key>VariableName</key>
+								<string>Recorded Audio</string>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+
+	<key>WFWorkflowClientRelease</key>
+	<string>1080</string>
+	<key>WFWorkflowClientVersion</key>
+	<string>2620</string>
+	<key>WFWorkflowIcon</key>
+	<dict>
+		<key>WFWorkflowIconStartColor</key>
+		<integer>4282601983</integer>
+		<key>WFWorkflowIconGlyphNumber</key>
+		<integer>59784</integer>
+	</dict>
+	<key>WFWorkflowImportQuestions</key>
+	<array/>
+	<key>WFWorkflowInputContentItemClasses</key>
+	<array>
+		<string>WFAppStoreAppContentItem</string>
+		<string>WFArticleContentItem</string>
+		<string>WFContactContentItem</string>
+		<string>WFDateContentItem</string>
+		<string>WFEmailAddressContentItem</string>
+		<string>WFGenericFileContentItem</string>
+		<string>WFImageContentItem</string>
+		<string>WFiTunesProductContentItem</string>
+		<string>WFLocationContentItem</string>
+		<string>WFDCMapsLinkContentItem</string>
+		<string>WFAVAssetContentItem</string>
+		<string>WFPDFContentItem</string>
+		<string>WFPhoneNumberContentItem</string>
+		<string>WFRichTextContentItem</string>
+		<string>WFSafariWebPageContentItem</string>
+		<string>WFStringContentItem</string>
+		<string>WFURLContentItem</string>
+	</array>
+	<key>WFWorkflowMinimumClientRelease</key>
+	<integer>1080</integer>
+	<key>WFWorkflowMinimumClientVersion</key>
+	<integer>2620</integer>
+	<key>WFWorkflowTypes</key>
+	<array>
+		<string>NCWidget</string>
+		<string>Watch</string>
+	</array>
+	<key>WFWorkflowHasShortcutInputVariables</key>
+	<false/>
+	<key>WFWorkflowNoInputBehavior</key>
+	<dict>
+		<key>Name</key>
+		<string>WFWorkflowNoInputBehaviorAskForInput</string>
+		<key>Parameters</key>
+		<dict>
+			<key>ItemClass</key>
+			<string>WFStringContentItem</string>
+		</dict>
+	</dict>
+	<key>WFWorkflowHasOutputFallback</key>
+	<false/>
+</dict>
+</plist>
