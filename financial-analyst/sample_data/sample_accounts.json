@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Brokerage",
+    "account_type": "brokerage",
+    "institution": "Fidelity",
+    "metadata": {
+      "account_number": "****1234",
+      "opened": "2021-01-01"
+    }
+  },
+  {
+    "name": "IRA",
+    "account_type": "retirement",
+    "institution": "Vanguard",
+    "metadata": {
+      "account_number": "****5678",
+      "type": "Traditional IRA",
+      "opened": "2020-03-15"
+    }
+  },
+  {
+    "name": "Crypto",
+    "account_type": "crypto",
+    "institution": "Coinbase",
+    "metadata": {
+      "opened": "2022-11-01"
+    }
+  },
+  {
+    "name": "Savings",
+    "account_type": "cash",
+    "institution": "Chase",
+    "metadata": {
+      "account_number": "****9012",
+      "type": "High-yield savings",
+      "apy": 4.5
+    }
+  },
+  {
+    "name": "Stock Options",
+    "account_type": "options",
+    "institution": "Company Stock Plan",
+    "metadata": {
+      "vesting_schedule": "4 year, 25% per year",
+      "grant_date": "2021-06-01"
+    }
+  }
+]

@@ -1,0 +1,13 @@
+date,type,amount,category,description
+2024-01-15,income,16667,salary,Monthly salary
+2024-01-20,income,5000,consulting,Consulting project payment
+2024-01-25,income,1500,royalties,Book royalties Q4
+2024-01-05,expense,3000,housing,Rent payment
+2024-01-10,expense,500,utilities,Electric and internet
+2024-01-12,expense,800,groceries,Monthly groceries
+2024-01-18,expense,150,transportation,Gas and parking
+2024-02-15,income,16667,salary,Monthly salary
+2024-02-22,income,7500,consulting,Consulting project payment
+2024-02-05,expense,3000,housing,Rent payment
+2024-02-10,expense,500,utilities,Electric and internet
+2024-02-28,expense,200,entertainment,Dinner and events

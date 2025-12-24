@@ -1,0 +1,11 @@
+account,symbol,asset_type,quantity,cost_basis,purchase_date,current_price
+Brokerage,AAPL,stocks,100,150.00,2023-01-15,175.50
+Brokerage,NVDA,stocks,50,400.00,2023-03-20,880.00
+Brokerage,MSFT,stocks,75,300.00,2023-02-10,420.00
+Brokerage,VTI,stocks,200,180.00,2022-06-01,225.00
+IRA,VOO,stocks,150,350.00,2021-01-01,450.00
+IRA,BND,bonds,300,75.00,2021-01-01,70.00
+Crypto,BTC,crypto,0.5,45000.00,2022-11-15,67000.00
+Crypto,ETH,crypto,2.0,2500.00,2022-11-15,3800.00
+Savings,CASH,cash,25000,1.00,2024-01-01,1.00
+Stock Options,COMPANY,options,1000,10.00,2021-06-01,45.00

@@ -1,0 +1,92 @@
+{
+  "income": [
+    {
+      "date": "2024-01-15",
+      "category": "salary",
+      "amount": 16667,
+      "description": "Base salary",
+      "recurring": true,
+      "frequency": "monthly"
+    },
+    {
+      "date": "2024-01-20",
+      "category": "consulting",
+      "amount": 5000,
+      "description": "Consulting retainer",
+      "recurring": true,
+      "frequency": "monthly"
+    },
+    {
+      "date": "2024-01-25",
+      "category": "royalties",
+      "amount": 1500,
+      "description": "Book royalties",
+      "recurring": true,
+      "frequency": "quarterly"
+    },
+    {
+      "date": "2024-02-10",
+      "category": "speaking",
+      "amount": 3000,
+      "description": "Conference speaking fee",
+      "recurring": false
+    }
+  ],
+  "expenses": [
+    {
+      "date": "2024-01-01",
+      "category": "housing",
+      "amount": 3000,
+      "description": "Rent",
+      "recurring": true,
+      "frequency": "monthly"
+    },
+    {
+      "date": "2024-01-05",
+      "category": "utilities",
+      "amount": 500,
+      "description": "Electric, internet, phone",
+      "recurring": true,
+      "frequency": "monthly"
+    },
+    {
+      "date": "2024-01-10",
+      "category": "groceries",
+      "amount": 800,
+      "description": "Monthly groceries",
+      "recurring": true,
+      "frequency": "monthly"
+    },
+    {
+      "date": "2024-01-15",
+      "category": "transportation",
+      "amount": 150,
+      "description": "Gas and parking",
+      "recurring": true,
+      "frequency": "monthly"
+    },
+    {
+      "date": "2024-01-20",
+      "category": "insurance",
+      "amount": 400,
+      "description": "Health insurance premium",
+      "recurring": true,
+      "frequency": "monthly"
+    },
+    {
+      "date": "2024-01-25",
+      "category": "subscriptions",
+      "amount": 100,
+      "description": "Software subscriptions",
+      "recurring": true,
+      "frequency": "monthly"
+    },
+    {
+      "date": "2024-02-01",
+      "category": "entertainment",
+      "amount": 200,
+      "description": "Dining and events",
+      "recurring": false
+    }
+  ]
+}
