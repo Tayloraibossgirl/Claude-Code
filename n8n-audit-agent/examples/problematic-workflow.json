@@ -1,0 +1,75 @@
+{
+  "name": "Problematic Workflow",
+  "nodes": [
+    {
+      "id": "webhook-1",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300],
+      "parameters": {
+        "path": "webhook",
+        "httpMethod": "POST"
+      }
+    },
+    {
+      "id": "function-1",
+      "name": "Unsafe Code",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [450, 300],
+      "parameters": {
+        "functionCode": "const userInput = items[0].json.code;\nreturn [{ json: eval(userInput) }];"
+      }
+    },
+    {
+      "id": "http-1",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [650, 300],
+      "parameters": {
+        "url": "http://localhost:3000/api",
+        "method": "POST"
+      }
+    },
+    {
+      "id": "set-1",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [850, 300],
+      "disabled": true,
+      "parameters": {}
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Unsafe Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Unsafe Code": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "saveDataErrorExecution": "none",
+    "saveDataSuccessExecution": "none"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "n8n-workflow-audit-agent",
+  "version": "1.0.0",
+  "description": "Comprehensive audit and testing agent for n8n workflows",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "audit": "node dist/index.js audit",
+    "test": "node --test tests/**/*.test.js",
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": ["n8n", "workflow", "audit", "testing", "automation"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "tsx": "^4.7.0"
+  }
+}
