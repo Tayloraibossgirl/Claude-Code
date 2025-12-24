@@ -1,0 +1,258 @@
+{
+  "shortcut": {
+    "name": "Record to Note",
+    "description": "Quickly start a voice recording and save it to a note with timestamp",
+    "icon": {
+      "glyph": "mic.fill",
+      "color": "red"
+    },
+    "actions": [
+      {
+        "step": 1,
+        "type": "Ask for Input",
+        "action": "ask.input",
+        "parameters": {
+          "question": "Recording name (optional)",
+          "inputType": "Text",
+          "defaultAnswer": "",
+          "allowsMultipleLines": false
+        },
+        "output": "Provided Input"
+      },
+      {
+        "step": 2,
+        "type": "Current Date",
+        "action": "date.current",
+        "parameters": {
+          "format": "Custom",
+          "customFormat": "yyyy-MM-dd HH:mm:ss"
+        },
+        "output": "Current Date"
+      },
+      {
+        "step": 3,
+        "type": "Text",
+        "action": "text.create",
+        "parameters": {
+          "text": "Voice Recording - {{Provided Input}}\nDate: {{Current Date}}\n\n"
+        },
+        "output": "Text"
+      },
+      {
+        "step": 4,
+        "type": "Record Audio",
+        "action": "audio.record",
+        "parameters": {
+          "startRecording": "Immediately",
+          "finishRecording": "On Tap",
+          "audioQuality": "High"
+        },
+        "output": "Recorded Audio"
+      },
+      {
+        "step": 5,
+        "type": "Find Notes",
+        "action": "notes.find",
+        "parameters": {
+          "filter": {
+            "property": "Title",
+            "condition": "is",
+            "value": "Voice Recordings"
+          },
+          "sortBy": "Date Modified",
+          "order": "Latest First",
+          "limit": 1,
+          "ifNoResult": "Create Note"
+        },
+        "output": "Notes"
+      },
+      {
+        "step": 6,
+        "type": "Append to Note",
+        "action": "notes.append",
+        "parameters": {
+          "note": "{{Notes}}",
+          "text": "{{Text}}\n{{Recorded Audio}}\n\n---\n\n"
+        },
+        "output": "Note"
+      }
+    ],
+    "shortcuts": {
+      "siri": "Record to Note",
+      "homeScreen": true,
+      "widget": true
+    }
+  },
+  "variations": {
+    "simple": {
+      "name": "Quick Record",
+      "description": "Simple recording that creates a new note each time",
+      "actions": [
+        {
+          "step": 1,
+          "type": "Record Audio",
+          "action": "audio.record",
+          "parameters": {
+            "startRecording": "Immediately",
+            "finishRecording": "On Tap",
+            "audioQuality": "Normal"
+          }
+        },
+        {
+          "step": 2,
+          "type": "Create Note",
+          "action": "notes.create",
+          "parameters": {
+            "body": "{{Recorded Audio}}",
+            "showWhenRun": true
+          }
+        }
+      ]
+    },
+    "withTranscription": {
+      "name": "Record & Transcribe to Note",
+      "description": "Records audio and adds AI transcription to note",
+      "actions": [
+        {
+          "step": 1,
+          "type": "Ask for Input",
+          "parameters": {
+            "question": "Recording name (optional)",
+            "inputType": "Text"
+          }
+        },
+        {
+          "step": 2,
+          "type": "Current Date",
+          "parameters": {
+            "format": "Custom",
+            "customFormat": "MMMM d, yyyy 'at' h:mm a"
+          }
+        },
+        {
+          "step": 3,
+          "type": "Record Audio",
+          "parameters": {
+            "startRecording": "Immediately",
+            "finishRecording": "On Tap",
+            "audioQuality": "High"
+          }
+        },
+        {
+          "step": 4,
+          "type": "Get Text from Input",
+          "action": "text.extract",
+          "parameters": {
+            "input": "{{Recorded Audio}}",
+            "method": "Transcription"
+          },
+          "output": "Transcription",
+          "note": "iOS 18+ feature - uses on-device speech recognition"
+        },
+        {
+          "step": 5,
+          "type": "Text",
+          "parameters": {
+            "text": "# {{Provided Input}}\n**{{Current Date}}**\n\n## Transcription:\n{{Transcription}}\n\n## Recording:\n"
+          }
+        },
+        {
+          "step": 6,
+          "type": "Find Notes",
+          "parameters": {
+            "filter": {
+              "property": "Title",
+              "condition": "is",
+              "value": "Voice Recordings"
+            }
+          }
+        },
+        {
+          "step": 7,
+          "type": "Append to Note",
+          "parameters": {
+            "note": "{{Notes}}",
+            "text": "{{Text}}\n{{Recorded Audio}}\n\n---\n\n"
+          }
+        }
+      ]
+    },
+    "organizedByMonth": {
+      "name": "Monthly Recording",
+      "description": "Automatically organizes recordings into monthly notes",
+      "actions": [
+        {
+          "step": 1,
+          "type": "Current Date",
+          "parameters": {
+            "format": "Custom",
+            "customFormat": "MMMM yyyy"
+          },
+          "output": "Month Year"
+        },
+        {
+          "step": 2,
+          "type": "Current Date",
+          "parameters": {
+            "format": "Custom",
+            "customFormat": "MMM d 'at' h:mm a"
+          },
+          "output": "Timestamp"
+        },
+        {
+          "step": 3,
+          "type": "Record Audio",
+          "parameters": {
+            "startRecording": "Immediately",
+            "finishRecording": "On Tap",
+            "audioQuality": "High"
+          }
+        },
+        {
+          "step": 4,
+          "type": "Find Notes",
+          "parameters": {
+            "filter": {
+              "property": "Title",
+              "condition": "is",
+              "value": "Recordings - {{Month Year}}"
+            },
+            "ifNoResult": "Create Note"
+          }
+        },
+        {
+          "step": 5,
+          "type": "Append to Note",
+          "parameters": {
+            "note": "{{Notes}}",
+            "text": "### {{Timestamp}}\n{{Recorded Audio}}\n\n"
+          }
+        }
+      ]
+    }
+  },
+  "requirements": {
+    "ios_version": "18.0+",
+    "apps": [
+      "Shortcuts (built-in)",
+      "Notes (built-in)"
+    ],
+    "permissions": [
+      "Microphone",
+      "Notes"
+    ]
+  },
+  "installation": {
+    "manual": "See NOTE_RECORDING_SHORTCUT.md for step-by-step instructions",
+    "import": "Not available - iOS shortcuts must be created manually or imported via iCloud links"
+  },
+  "usage": {
+    "triggers": [
+      "Tap shortcut in Shortcuts app",
+      "Tap home screen icon",
+      "Say 'Hey Siri, Record to Note'",
+      "Tap Shortcuts widget",
+      "Press Action Button (iPhone 15 Pro/16)"
+    ]
+  }
+}
