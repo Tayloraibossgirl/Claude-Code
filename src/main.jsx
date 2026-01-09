@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import FlowfieldGame from './components/FlowfieldGame'
+import MusicRecreationApp from './components/MusicRecreationApp'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <FlowfieldGame />
+    <MusicRecreationApp />
   </React.StrictMode>,
 )
