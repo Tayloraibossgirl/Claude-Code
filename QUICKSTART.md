@@ -1,11 +1,12 @@
-# Quick Start Guide 🚀
+# Hypertechno Remix Generator - Quick Start 🚀⚡
 
-Get your Music Recreation Studio up and running in 5 minutes!
+Get your AI-powered hypertechno remix generator running in 5 minutes!
 
 ## Prerequisites
 
 - Node.js installed (v16+)
 - Anthropic API key from [console.anthropic.com](https://console.anthropic.com/)
+- Audio file to remix (MP3, WAV, etc.)
 
 ## Setup Steps
 
@@ -29,7 +30,7 @@ Open a terminal and run:
 npm run server
 ```
 
-You should see: `Music Recreation API server running on port 3001`
+You should see: `🎵 Hypertechno Remix API Server Running!`
 
 ### 4. Start the Frontend
 Open a **new terminal** (keep the backend running) and run:
@@ -41,56 +42,114 @@ Visit: `http://localhost:5173`
 
 ## Using the App
 
-### Example Usage
+### Quick Example
 
-1. **Enter a description** like:
-   ```
-   Create upbeat 80s synthwave music with energetic synths,
-   driving bassline, and nostalgic atmosphere
-   ```
+**Step 1: Upload Audio**
+- Click the upload box or drag an audio file
+- Supported: MP3, WAV, OGG, M4A (max 50MB)
+- **IMPORTANT**: Only upload music you own or have permission to remix
 
-2. **Click "Analyze Style with AI"** - Claude will analyze the musical style
+**Step 2: AI Analysis**
+- Click "Analyze with AI"
+- Claude analyzes: genre, BPM, key, structure, mood, remix potential
+- Takes 5-15 seconds
 
-3. **Click "Generate Music Parameters"** - AI creates synthesis parameters
+**Step 3: Generate Remix**
+- Click "Generate Hypertechno Remix"
+- AI creates detailed remix parameters
+- Takes 10-20 seconds
 
-4. **Click "Play Generated Music"** - Listen to your creation!
+**Step 4: Customize & Play**
+- **Target BPM**: Adjust to 160-220 (default: 180)
+- **Intensity**: 0% (subtle) to 100% (extreme hypertechno)
+- **Volume**: Adjust -30 to 0 dB
+- Click "Play Hypertechno Remix" and enjoy! 🔥
 
-### Tips
+**Step 5: Download**
+- Use audio recording software (Audacity, OBS) to capture the output
+- Or enjoy it live in the browser!
 
-- Be descriptive about the style you want (genre, mood, tempo, instruments)
-- Reference artist styles for inspiration (transformative use only)
-- Adjust volume and duration before playing
-- Use headphones for best audio quality
+## What is Hypertechno?
+
+Extreme electronic music characterized by:
+- **180-200+ BPM** (very fast!)
+- **Hard kicks** (aggressive 4-on-the-floor)
+- **Industrial synths** (harsh, metallic sounds)
+- **Minimal melody** (focus on energy and rhythm)
+
+## Examples
+
+### Transforming a Pop Song
+1. Upload: "my_pop_song.mp3" (120 BPM)
+2. Analysis: "Pop, upbeat, major key, standard structure"
+3. Remix: → 180 BPM, add hard kicks, industrial leads
+4. Result: High-energy hypertechno version!
+
+### Transforming a Rock Song
+1. Upload: "rock_track.wav" (140 BPM)
+2. Analysis: "Rock, energetic, guitar-driven, powerful"
+3. Remix: → 190 BPM, distorted synths replace guitars
+4. Result: Aggressive industrial hypertechno!
 
 ## Troubleshooting
 
 **Backend won't start**
 - Check your API key is in `.env`
 - Make sure port 3001 is available
+- Verify Node.js is installed (`node --version`)
 
 **Frontend won't connect**
 - Ensure backend is running first
-- Check console for errors
-- Verify API URL in the app matches backend port
+- Check console for errors (F12 in browser)
+- Try different port if 5173 is in use
 
 **No sound**
-- Click "Play" button to start audio context
+- Click "Play" button (starts audio context)
 - Check browser audio permissions
 - Try Chrome or Firefox
+- Adjust volume slider
+
+**Upload fails**
+- Check file is audio format
+- Ensure file is under 50MB
+- Try different browser
+
+## Tips for Best Results
+
+1. **Start with 50% intensity** to hear a balanced mix
+2. **Adjust BPM** based on original song's energy
+3. **Use headphones** for best audio quality
+4. **Experiment** with different intensity levels
+5. **Record your favorites** using audio software
+
+## Legal Reminder
+
+⚠️ **Only upload music you own or have permission to remix!**
+
+This tool creates transformative remixes for:
+✅ Your own music
+✅ Personal creative projects
+✅ Educational experiments
+
+❌ Do NOT distribute remixes of copyrighted music without permission!
 
 ## What's Next?
 
-- Experiment with different music styles
-- Try varying the descriptions to get different results
-- Adjust synthesis parameters in the code for custom sounds
-- Check out the full [README.md](README.md) for more details
+- Experiment with different songs and styles
+- Try varying BPM (160-220) for different energy levels
+- Adjust intensity to find your perfect blend
+- Check out the full [README.md](README.md) for technical details
+- Customize the code to create your own remix styles!
 
 ## Need Help?
 
 - Check the full README.md
-- Review the API documentation
+- Review browser console for errors (F12)
+- Verify API key is valid
 - Open an issue on GitHub
 
 ---
 
-**Remember**: This creates ORIGINAL music inspired by styles, not copies. All synthesis, no sampling. Copyright-safe! 🎵
+**Ready to transform your music into hypertechno?** 🔥⚡
+
+Upload, analyze, remix, and unleash 180+ BPM mayhem! 🎵

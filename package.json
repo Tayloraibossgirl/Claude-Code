@@ -1,6 +1,6 @@
 {
-  "name": "music-recreation-app",
-  "version": "0.1.0",
+  "name": "hypertechno-remix-app",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "dependencies": {
@@ -11,7 +11,8 @@
     "express": "^4.18.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "tone": "^14.7.77"
+    "tone": "^14.7.77",
+    "multer": "^1.4.5-lts.1"
   },
   "scripts": {
     "dev": "vite",
