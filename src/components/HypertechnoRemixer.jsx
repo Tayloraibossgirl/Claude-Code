@@ -6,7 +6,8 @@ const HypertechnoRemixer = ({ originalAudioUrl, parameters, analysis }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(-10);
   const [intensity, setIntensity] = useState(75); // Hypertechno intensity (0-100)
-  const [targetBPM, setTargetBPM] = useState(180);
+  const [targetBPM, setTargetBPM] = useState(140); // Hypertechno sweet spot
+  const [sidechainAmount, setSidechainAmount] = useState(0.8); // Heavy pumping effect
   const [processing, setProcessing] = useState(false);
 
   const playerRef = useRef(null);
@@ -218,12 +219,12 @@ const HypertechnoRemixer = ({ originalAudioUrl, parameters, analysis }) => {
             type="number"
             value={targetBPM}
             onChange={(e) => setTargetBPM(parseInt(e.target.value))}
-            min="160"
-            max="220"
+            min="130"
+            max="160"
             step="5"
             className="w-full p-3 bg-white/5 border border-red-400/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-red-400"
           />
-          <span className="text-xs text-red-300">Hypertechno: 180-200 BPM</span>
+          <span className="text-xs text-red-300">Hypertechno sweet spot: 140 BPM</span>
         </div>
 
         {/* Intensity Control */}
@@ -268,23 +269,23 @@ const HypertechnoRemixer = ({ originalAudioUrl, parameters, analysis }) => {
 
       {/* Remix Info */}
       <div className="bg-red-900/30 border border-red-500/50 rounded-lg p-4">
-        <h4 className="font-semibold text-red-300 mb-2">Remix Features:</h4>
+        <h4 className="font-semibold text-red-300 mb-2">Hypertechno DNA:</h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
           <div>
             <div className="text-red-400 font-bold">{targetBPM} BPM</div>
-            <div className="text-red-200">Speed</div>
+            <div className="text-red-200">Sweet Spot</div>
           </div>
           <div>
-            <div className="text-red-400 font-bold">Hard Kicks</div>
-            <div className="text-red-200">4-on-floor</div>
+            <div className="text-red-400 font-bold">Pop Vocals</div>
+            <div className="text-red-200">+ Hard Techno</div>
           </div>
           <div>
-            <div className="text-red-400 font-bold">Distorted</div>
-            <div className="text-red-200">Industrial</div>
+            <div className="text-red-400 font-bold">Heavy Sidechain</div>
+            <div className="text-red-200">Pumping Effect</div>
           </div>
           <div>
-            <div className="text-red-400 font-bold">{intensity}%</div>
-            <div className="text-red-200">Intensity</div>
+            <div className="text-red-400 font-bold">TikTok Ready</div>
+            <div className="text-red-200">Viral Optimized</div>
           </div>
         </div>
       </div>
@@ -324,13 +325,14 @@ const HypertechnoRemixer = ({ originalAudioUrl, parameters, analysis }) => {
 
       {/* How It Works */}
       <div className="bg-purple-900/30 border border-purple-500/50 rounded-lg p-4">
-        <h4 className="font-semibold text-purple-300 mb-2">How the Remix Works:</h4>
+        <h4 className="font-semibold text-purple-300 mb-2">The Hypertechno Formula:</h4>
         <ul className="text-sm text-purple-100 space-y-1">
-          <li>• <strong>BPM Transformation:</strong> Original audio time-stretched to {targetBPM} BPM</li>
-          <li>• <strong>Hard Kicks:</strong> Aggressive 4-on-the-floor kick drum pattern</li>
-          <li>• <strong>Industrial Synths:</strong> Harsh sawtooth leads with distortion</li>
-          <li>• <strong>Intensity Control:</strong> Blend original audio (0%) to pure hypertechno (100%)</li>
-          <li>• <strong>Real-time Processing:</strong> All effects applied live in browser</li>
+          <li>• <strong>Pop Vocals:</strong> Recognizable hooks from your original track (retained!)</li>
+          <li>• <strong>140 BPM Hard Techno:</strong> Time-stretched to hypertechno sweet spot</li>
+          <li>• <strong>Punishing Kicks:</strong> Straight 4/4, heavily distorted, aggressive</li>
+          <li>• <strong>Heavy Sidechain:</strong> Everything pumps to the kick (signature sound)</li>
+          <li>• <strong>Industrial Elements:</strong> Distorted bass + metallic percussion</li>
+          <li>• <strong>TikTok Optimized:</strong> 2-3 min structure, instant hook recognition</li>
         </ul>
       </div>
 

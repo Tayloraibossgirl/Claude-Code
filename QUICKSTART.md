@@ -1,6 +1,8 @@
 # Hypertechno Remix Generator - Quick Start 🚀⚡
 
-Get your AI-powered hypertechno remix generator running in 5 minutes!
+**Pop Vocals + 140 BPM Hard Techno = Hypertechno**
+
+Get your AI-powered hypertechno remix generator running in 5 minutes! Turn any pop song into a TikTok-ready viral banger.
 
 ## Prerequisites
 
@@ -60,10 +62,10 @@ Visit: `http://localhost:5173`
 - Takes 10-20 seconds
 
 **Step 4: Customize & Play**
-- **Target BPM**: Adjust to 160-220 (default: 180)
-- **Intensity**: 0% (subtle) to 100% (extreme hypertechno)
+- **Target BPM**: Adjust to 130-160 (default: 140 - sweet spot!)
+- **Intensity**: 0% (subtle) to 100% (full hypertechno)
 - **Volume**: Adjust -30 to 0 dB
-- Click "Play Hypertechno Remix" and enjoy! 🔥
+- Click "Play Hypertechno Remix" - hear pop vocals + hard techno! 🔥
 
 **Step 5: Download**
 - Use audio recording software (Audacity, OBS) to capture the output
@@ -71,25 +73,30 @@ Visit: `http://localhost:5173`
 
 ## What is Hypertechno?
 
-Extreme electronic music characterized by:
-- **180-200+ BPM** (very fast!)
-- **Hard kicks** (aggressive 4-on-the-floor)
-- **Industrial synths** (harsh, metallic sounds)
-- **Minimal melody** (focus on energy and rhythm)
+**Born in Germany 2022-2023, went viral on TikTok.**
+
+The formula: Recognizable pop/eurodance vocal hooks + 140 BPM hard techno beats
+
+- **140 BPM** (hypertechno sweet spot - not too fast, not too slow)
+- **Pop vocal hooks** (Lady Gaga, Rihanna, 2000s eurodance - recognizable!)
+- **Punishing kicks** (straight 4/4, heavily distorted, relentless)
+- **Heavy sidechain** (everything pumps to the kick - signature sound)
+- **2-3 minutes** (TikTok/Instagram optimized)
+- **Maximum energy** (for clubs and viral content)
 
 ## Examples
 
 ### Transforming a Pop Song
-1. Upload: "my_pop_song.mp3" (120 BPM)
-2. Analysis: "Pop, upbeat, major key, standard structure"
-3. Remix: → 180 BPM, add hard kicks, industrial leads
-4. Result: High-energy hypertechno version!
+1. Upload: "lady_gaga_poker_face.mp3" (120 BPM)
+2. Analysis: "Pop, catchy vocal hooks, major key"
+3. Remix: → 140 BPM, preserve "P-p-p-poker face" hook + hard kicks
+4. Result: Recognizable Gaga vocals + relentless techno = Hypertechno! 🎵
 
-### Transforming a Rock Song
-1. Upload: "rock_track.wav" (140 BPM)
-2. Analysis: "Rock, energetic, guitar-driven, powerful"
-3. Remix: → 190 BPM, distorted synths replace guitars
-4. Result: Aggressive industrial hypertechno!
+### Transforming a Eurodance Track
+1. Upload: "90s_eurodance.wav" (140 BPM)
+2. Analysis: "Eurodance, energetic vocals, uplifting"
+3. Remix: → Perfect at 140! Add punishing kicks + heavy sidechain
+4. Result: Nostalgic vocals + modern hard techno = TikTok viral!
 
 ## Troubleshooting
 

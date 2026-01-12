@@ -1,6 +1,8 @@
 # Hypertechno Remix Generator ⚡🎵
 
-Transform any song into high-energy hypertechno using AI-powered analysis and real-time synthesis. Upload your audio, let Claude AI analyze the musical structure, and generate an aggressive hypertechno remix with 180-200 BPM, hard kicks, and industrial synths.
+**Pop Vocals + 140 BPM Hard Techno = Hypertechno**
+
+Transform any song into viral-ready hypertechno using AI-powered analysis. Born in Germany (2022-2023) and exploded on TikTok, hypertechno takes recognizable pop/eurodance vocal hooks and slams them over relentless 140 BPM hard techno beats. Upload your audio, let Claude AI analyze it, and generate that perfect blend of nostalgic vocals + aggressive techno energy.
 
 ## ⚖️ Copyright & Legal Compliance
 
@@ -26,21 +28,31 @@ This tool creates **transformative remixes** by:
 
 ## 🎹 What is Hypertechno?
 
-Hypertechno is an extreme electronic music style characterized by:
+**Genre DNA:** Born 2022-2023 in Germany, went viral on TikTok. Hypertechno = nostalgic 2000s pop/eurodance vocals + 140 BPM hard techno beats.
 
-- **Extremely Fast BPM**: 180-200+ (compared to pop's 100-130)
-- **Hard Distorted Kicks**: Aggressive 4-on-the-floor patterns
-- **Industrial Synths**: Harsh, metallic, energetic sounds
-- **Minimal Melody**: Focus on rhythm and raw energy
-- **Intense Build-ups & Drops**: Maximum tension and release
+Think Lady Gaga, Rihanna, or eurodance classics getting the hard techno treatment. The goal is creating that "Ohhh I know this song!" moment while your body moves to relentless techno energy.
+
+### Core Characteristics
+
+- **140-160 BPM** (sweet spot: 140) - Hard techno tempo
+- **Recognizable Pop Vocal Hooks** - THE defining element (not buried, featured!)
+- **Punishing Kicks** - Straight 4/4, heavily distorted, relentless
+- **Heavy Sidechain Compression** - Everything pumps to the kick (signature sound)
+- **Industrial Synths & Distorted Bass** - Aggressive, metallic, energetic
+- **2-3 Minute Structure** - Viral-optimized for TikTok/Instagram
+- **Maximum Loudness** - Loudness war champion (-6 to -4 LUFS)
+- **Pop Structure** - Verse/chorus/bridge (NOT slow-building techno journeys)
 
 ## ✨ Features
 
 - **Audio Upload**: Support for MP3, WAV, OGG, M4A (up to 50MB)
-- **AI Analysis**: Claude AI analyzes song structure, tempo, key, mood
-- **Hypertechno Transformation**: Real-time BPM adjustment, hard kicks, industrial leads
-- **Customizable Parameters**: Control BPM (160-220), intensity (0-100%), volume
+- **AI Analysis**: Claude AI analyzes vocals, structure, tempo, key, remix potential
+- **Hypertechno Transformation**: 140 BPM hard techno beats + preserved vocal hooks
+- **Vocal Preservation**: Keeps recognizable pop hooks (THE key to hypertechno)
+- **Customizable Parameters**: Control BPM (130-160), intensity (0-100%), volume
+- **Heavy Sidechain**: Signature pumping effect (everything sidechains to kick)
 - **Real-Time Synthesis**: Browser-based audio generation with Tone.js
+- **TikTok-Ready**: 2-3 minute viral-optimized structure
 - **Copyright-Safe**: Transformative use with clear legal guidance
 
 ## 🏗️ Architecture
@@ -121,21 +133,22 @@ Hypertechno is an extreme electronic music style characterized by:
 ### Step 3: Generate Remix
 - Click "Generate Hypertechno Remix"
 - AI creates detailed parameters:
-  - BPM transformation (original → 180+ BPM)
-  - Kick drum patterns
-  - Bass line design
+  - **Vocal treatment** (how to preserve recognition at 140 BPM)
+  - BPM transformation (original → 140 BPM sweet spot)
+  - Kick drum patterns (punishing hard techno)
+  - Heavy sidechain compression (pumping effect)
+  - Bass line design (distorted, aggressive)
   - Industrial synth leads
-  - Effects chain
-  - Arrangement restructuring
+  - TikTok-optimized arrangement (2-3 min)
 
 ### Step 4: Customize & Play
-- **Target BPM**: 160-220 (default: 180)
+- **Target BPM**: 130-160 (default: 140 - hypertechno sweet spot)
 - **Intensity**: 0-100% (how aggressive the remix is)
-  - 0%: Mostly original with subtle hypertechno elements
-  - 50%: Balanced blend
-  - 100%: Pure hypertechno transformation
+  - 0%: Original vocals + subtle techno kicks
+  - 50%: Perfect hypertechno blend (recommended!)
+  - 100%: Maximum techno aggression
 - **Volume**: -30 to 0 dB
-- Click "Play Hypertechno Remix" to hear your creation!
+- Click "Play Hypertechno Remix" and experience pop vocals + hard techno!
 
 ### Step 5: Download
 Use audio recording software (Audacity, OBS, etc.) to capture the remix output.

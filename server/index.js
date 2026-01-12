@@ -74,21 +74,31 @@ app.post('/api/analyze-audio', upload.single('audio'), async (req, res) => {
       max_tokens: 2000,
       messages: [{
         role: 'user',
-        content: `You are a music production expert analyzing an audio file for hypertechno remix generation.
+        content: `You are a music production expert analyzing an audio file for HYPERTECHNO remix generation.
 
 File name: ${fileName}
 
-Based on the filename and typical song structures, provide a detailed musical analysis including:
+HYPERTECHNO GENRE DNA (born 2022-2023 in Germany, viral on TikTok):
+- Pop vocals + 140 BPM hard techno beats
+- Recognizable pop/eurodance vocal hooks (THE defining element)
+- Straight 4/4 hard kicks with heavy distortion
+- 2-3 minute viral-optimized structure
+- Heavy sidechain compression (pumping effect)
+- Industrial percussion + aggressive distorted bass
+
+Analyze this audio file for hypertechno remix potential:
 
 1. **Likely Genre & Style**: What genre does this appear to be?
 2. **Estimated BPM**: Typical BPM for this type of music
 3. **Likely Key**: Common keys for this genre
-4. **Song Structure**: Typical structure (intro, verse, chorus, bridge, outro)
-5. **Instrumentation**: Expected instruments and sounds
-6. **Mood & Energy**: Emotional characteristics
-7. **Remix Potential**: How well this would work as a hypertechno remix
+4. **Vocal Characteristics**: Does it have recognizable pop vocal hooks? (CRITICAL for hypertechno)
+5. **Song Structure**: Typical structure (intro, verse, chorus, bridge, outro)
+6. **Instrumentation**: Expected instruments and sounds
+7. **Mood & Energy**: Emotional characteristics
+8. **Remix Potential**: How well will the vocals work at 140 BPM with hard techno beats?
 
-Provide specific, actionable information that will help create an authentic hypertechno remix (180-200 BPM, hard kicks, industrial synths, aggressive energy).
+Focus on identifying memorable vocal hooks and how they'll sound over relentless 140 BPM techno drums.
+Hypertechno is about creating that "Ohhh I know this song!" moment with aggressive beats.
 
 Format your response as a structured analysis that's easy to read.`
       }]
@@ -139,55 +149,80 @@ app.post('/api/generate-hypertechno-remix', async (req, res) => {
       max_tokens: 3000,
       messages: [{
         role: 'user',
-        content: `You are an expert hypertechno music producer. Based on this audio analysis, create detailed remix parameters.
+        content: `You are an expert HYPERTECHNO music producer. Based on this audio analysis, create detailed remix parameters.
+
+HYPERTECHNO FORMULA:
+Pop Vocals + 140 BPM Hard Techno Beats = HYPERTECHNO
+
+GENRE DNA (born 2022-2023 Germany, TikTok viral):
+- Recognizable pop/eurodance vocal hooks (MOST IMPORTANT)
+- 140-160 BPM (sweet spot: 140)
+- Straight 4/4 punishing kicks
+- Heavy sidechain compression (pumping effect)
+- Industrial synths + distorted bass
+- 2-3 minute viral-optimized structure
+- Maximum loudness
 
 AUDIO ANALYSIS:
 ${analysis}
 
-TARGET STYLE: Hypertechno
-TARGET BPM: ${targetBPM || 180}
+TARGET BPM: ${targetBPM || 140}
 
-Generate comprehensive remix parameters including:
+Generate comprehensive HYPERTECHNO remix parameters including:
 
-1. **BPM Transformation**
-   - Original estimated BPM → Target ${targetBPM || 180} BPM
-   - Time-stretch factor
-   - Pitch adjustment to maintain musicality
+1. **VOCAL TREATMENT** (MOST CRITICAL - this defines hypertechno)
+   - Which vocal hooks/phrases to emphasize
+   - How to preserve recognition while fitting 140 BPM
+   - Pitch adjustments (if needed)
+   - Effects: reverb/delay for space (tasteful, not overwhelming)
+   - Placement strategy for "Ohhh I know this!" moments
 
-2. **Kick Drum Pattern**
-   - Kick placement (4-on-the-floor with variations)
-   - Kick sound design (distortion level, pitch envelope)
-   - Layering strategy
+2. **BPM Transformation**
+   - Original estimated BPM → Target ${targetBPM || 140} BPM
+   - Time-stretch factor (maintain vocal clarity)
+   - Pitch compensation to keep vocals natural
 
-3. **Bass Line**
-   - How to transform original bass or create new
-   - Frequency range (sub-bass focus)
-   - Distortion and saturation levels
+3. **KICK DRUM** (Foundation)
+   - Straight 4/4 pattern (no swing!)
+   - Punishing hard techno kick design
+   - Heavy distortion/saturation levels
+   - Frequency: 40-60Hz (sub), 80-120Hz (body), crisp click
 
-4. **Lead Synths**
-   - Harsh industrial lead patterns
-   - Frequency ranges and filter sweeps
-   - Modulation and effects
+4. **SIDECHAIN COMPRESSION** (Signature pumping effect)
+   - Everything sidechains to kick (bass, synths, vocals)
+   - Aggressive settings for maximum pump
+   - Creates the driving hypertechno feel
 
-5. **Effects Chain**
-   - Distortion settings (for aggression)
-   - Reverb/delay (industrial atmosphere)
-   - Compression (hard limiting for loudness)
-   - Filter automation
+5. **Bass Line**
+   - Rolling, driving, aggressive
+   - Locked to kick rhythm
+   - Heavy distortion + bit-crushing
+   - Mono below 200Hz
 
-6. **Arrangement**
-   - How to restructure original song sections
-   - Build-ups and drops placement
-   - Breakdown and climax timing
+6. **Industrial Elements**
+   - Metallic hi-hats (16th notes)
+   - Hard techno claps/snares (2 & 4)
+   - Screech leads during builds (optional)
+   - Distorted percussion fills
 
-7. **Mixing Ratios**
-   - Original audio: X%
-   - Kicks: X%
-   - Bass: X%
-   - Leads: X%
-   - Effects: X%
+7. **Arrangement** (Viral-optimized 2-3 min structure)
+   - Intro: 8-16 bars (drums + vocal teaser)
+   - Verse: Add bass + partial vocals
+   - Build: Extended (32+ bars) with tension
+   - Drop: FULL vocal hook + all elements (recognition moment!)
+   - Breakdown: Strip to vocals + minimal percussion
+   - Final drop: Maximum energy
+   - Outro: Quick fade (4-8 bars)
 
-Provide specific numeric values and concrete instructions for creating an authentic hypertechno remix.
+8. **Mixing Philosophy**
+   - Maximum loudness (-6 to -4 LUFS)
+   - Heavy limiting/compression
+   - Kick + bass: mono
+   - Vocals: centered with stereo effects
+   - Everything else: wide stereo
+
+Provide specific numeric values and concrete instructions for creating an AUTHENTIC hypertechno remix that will go viral on TikTok.
+Remember: It's about recognizable pop vocals + relentless 140 BPM techno beats!
 Format as a clear, structured guide.`
       }]
     });

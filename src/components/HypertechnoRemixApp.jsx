@@ -110,7 +110,7 @@ const HypertechnoRemixApp = () => {
             <Zap className="w-12 h-12 text-red-400 animate-pulse" />
           </div>
           <p className="text-xl text-purple-200">
-            Transform Any Song into Hypertechno • AI-Powered Remix Engine
+            Pop Vocals + 140 BPM Hard Techno = Hypertechno • Born in Germany, Viral on TikTok
           </p>
         </div>
 
@@ -224,12 +224,17 @@ const HypertechnoRemixApp = () => {
 
               <div className="mt-8 bg-purple-900/30 border border-purple-500/50 rounded-lg p-4">
                 <h4 className="font-semibold text-purple-300 mb-2">What is Hypertechno?</h4>
+                <p className="text-sm text-purple-200 mb-3">
+                  <strong>Born 2022-2023 in Germany, went viral on TikTok.</strong> It's nostalgic 2000s pop/eurodance vocals
+                  over relentless hard techno beats. Think Lady Gaga or Rihanna hooks at 140 BPM with punishing kicks.
+                </p>
                 <ul className="text-sm text-purple-100 space-y-1">
-                  <li>• <strong>Extremely fast BPM:</strong> 180-200+ (vs. pop's 100-130)</li>
-                  <li>• <strong>Hard, distorted kicks:</strong> Aggressive 4-on-the-floor beats</li>
-                  <li>• <strong>Industrial synths:</strong> Harsh, metallic, energetic sounds</li>
-                  <li>• <strong>Minimal melody:</strong> Focus on rhythm and energy</li>
-                  <li>• <strong>Build-ups & drops:</strong> Intense tension and release</li>
+                  <li>• <strong>140 BPM sweet spot:</strong> Hard techno tempo (not too fast, not too slow)</li>
+                  <li>• <strong>Pop vocal hooks:</strong> Recognizable choruses you know and love</li>
+                  <li>• <strong>Punishing kicks:</strong> Straight 4/4, heavily distorted, relentless</li>
+                  <li>• <strong>Heavy sidechain:</strong> Everything pumps to the kick (signature sound)</li>
+                  <li>• <strong>2-3 min structure:</strong> Viral-optimized for TikTok/Instagram</li>
+                  <li>• <strong>Maximum loudness:</strong> Loudness war champion (-6 to -4 LUFS)</li>
                 </ul>
               </div>
             </div>
