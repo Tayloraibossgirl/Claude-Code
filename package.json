@@ -1,7 +1,8 @@
 {
-  "name": "flowfield-puzzle",
-  "version": "0.1.0",
+  "name": "flowradio-dj",
+  "version": "0.2.0",
   "private": true,
+  "description": "FlowRadio - AI DJ Agent for Spotify with harmonic mixing, energy arc management, and multi-agent intelligence",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
