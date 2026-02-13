@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import FlowfieldGame from './components/FlowfieldGame'
+import RemixAgent from './components/RemixAgent'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <FlowfieldGame />
+    <RemixAgent />
   </React.StrictMode>,
 )
